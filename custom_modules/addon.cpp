@@ -129,7 +129,7 @@ void Addon::update_custom_class(Cell* pCell){
   return;
 }
 Addon* create_Addon(Addon_Factory* custom_class_type ){//do not run in parrallel section
-    set_debug();
+    // set_debug();
     Addon* ptr=new Addon(custom_class_type);
   #pragma omp critical
   {
@@ -144,7 +144,7 @@ Addon* create_Addon(Addon_Factory* custom_class_type ){//do not run in parrallel
     return ptr; 
 }
 Addon* create_Addon(Addon_Factory* custom_class_type, int final_cell_count ){//do not run in parrallel section
-    set_debug();
+    // set_debug();
     Addon* ptr=new Addon(custom_class_type);
   #pragma omp critical
   {
